@@ -1,3 +1,4 @@
+// Configuações globais
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
   font-family: "Noto Sans", sans-serif;
 }
 
+// Estilização da Header
 header {
   display: flex;
   align-items: center;
@@ -33,17 +35,209 @@ header {
   }
 }
 
-@media (max-width: 768px) {
+// Estilização da primeira parte da main
+.sessaoAlerta {
+  // vh - viewport height
+  height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #FFD9EC;
+
+  p {
+      width: 40%;
+      font-size: 25px;
+  }
+
+  img {
+      width: 19.010416666666668vw;
+  }
+}
+
+.sessaoAlerta img {
+  transition: transform 0.4s ease;
+}
+
+.sessaoAlerta img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+// Estilização da main segunda parte
+.sessaoCorrida {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 35vh;
+  background-color: #FF69B4;
+  
+
+  p {
+      width: 55%;
+      font-size: 25px;
+      color: #E4EEF1;
+  }
+}
+
+.sessaoCorrida img {
+  transition: transform 0.4s ease;
+}
+
+.sessaoCorrida img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+// Estilização da seção Dicas 
+.sessaoDicas {
+  padding: 50px 0;
+  height: 40vh;
+  background-color: #FFD9EC;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+.sessaoDicas img {
+  transition: transform 0.4s ease;
+}
+
+.sessaoDicas img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+// Estilização do footer
+footer {
+  background-color: #FF69B4;
+  padding: 2vh;
+
+  address {
+    display: flex;
+    
+    // Estilizações para a seção de redes sociais
+    .redesSociais {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // Estilizando as imagens das redes sociais
+        img {
+        width: 80%;
+        }
+    }
+    // Caixa de direitos autorais
+    .caixaDireitosAutorais {
+      display: flex;
+      flex-direction: column;
+      color: #E4EEF1;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+  // Seção de imagem do "Outubro Rosa"
+  section {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+}
+
+.outubroRosa {
+  transition: transform 0.4s ease;
+}
+
+.outubroRosa:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+// Estilização responsiva com a largura máxima de 640px
+@media (max-width: 640px) {
+  main {
+    .sessaoAlerta img{
+      width: 40vh;
+    }
+
+    .sessaoCorrida img{
+      width: 50vh;
+    }
+  }
+
+  address {
+    display: flex;
+    flex-direction: column;
+
+    .redesSociais {
+      margin: 1.5rem auto;
+    }
+
+    .outubroRosa {
+      width: 20%;
+      margin: 2rem auto;
+    }
+  }
+}
+
+// Estilização responsiva com a largura máxima de 1000px
+@media (max-width: 1000px) {
   header {
     height: 20vh;
     flex-direction: column;
-
+    
     nav {
-      width: 95%;
+        width: 95%;
 
-      ul {
-        justify-content: space-between;
-      }
+        ul {
+            a {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+  .sessaoAlerta {
+    height: 80vh;
+    flex-direction: column-reverse;
+
+    p {
+        width: 90%;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    img {
+        width: 40%;
+    }
+}
+
+  .sessaoCorrida {
+    height: 80vh;
+    flex-direction: column;
+
+    p {
+        width: 90%;
+        font-size: 22px;
+        text-align: center;
+    }
+  }
+
+  .sessaoDicas {
+    flex-direction: column;
+    height: 100vh;
+
+    img {
+      width: 20vh;
+      margin: 0 auto;
+    }
+  }
+
+  footer {
+    .redesSociais {
+      width: 200px;
     }
   }
 }

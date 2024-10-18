@@ -31,7 +31,129 @@ header nav ul a {
   font-size: 20px;
 }
 
-@media (max-width: 768px) {
+.sessaoAlerta {
+  height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #FFD9EC;
+}
+.sessaoAlerta p {
+  width: 40%;
+  font-size: 25px;
+}
+.sessaoAlerta img {
+  width: 19.0104166667vw;
+}
+
+.sessaoAlerta img {
+  transition: transform 0.4s ease;
+}
+
+.sessaoAlerta img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.sessaoCorrida {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 35vh;
+  background-color: #FF69B4;
+}
+.sessaoCorrida p {
+  width: 55%;
+  font-size: 25px;
+  color: #E4EEF1;
+}
+
+.sessaoCorrida img {
+  transition: transform 0.4s ease;
+}
+
+.sessaoCorrida img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.sessaoDicas {
+  padding: 50px 0;
+  height: 40vh;
+  background-color: #FFD9EC;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sessaoDicas img {
+  transition: transform 0.4s ease;
+}
+
+.sessaoDicas img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+footer {
+  background-color: #FF69B4;
+  padding: 2vh;
+}
+footer address {
+  display: flex;
+}
+footer address .redesSociais {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer address .redesSociais img {
+  width: 80%;
+}
+footer address .caixaDireitosAutorais {
+  display: flex;
+  flex-direction: column;
+  color: #E4EEF1;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.outubroRosa {
+  transition: transform 0.4s ease;
+}
+
+.outubroRosa:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  main .sessaoAlerta img {
+    width: 40vh;
+  }
+  main .sessaoCorrida img {
+    width: 50vh;
+  }
+  address {
+    display: flex;
+    flex-direction: column;
+  }
+  address .redesSociais {
+    margin: 1.5rem auto;
+  }
+  address .outubroRosa {
+    width: 20%;
+    margin: 2rem auto;
+  }
+}
+@media (max-width: 1000px) {
   header {
     height: 20vh;
     flex-direction: column;
@@ -39,7 +161,39 @@ header nav ul a {
   header nav {
     width: 95%;
   }
-  header nav ul {
-    justify-content: space-between;
+  header nav ul a {
+    font-size: 22px;
+  }
+  .sessaoAlerta {
+    height: 80vh;
+    flex-direction: column-reverse;
+  }
+  .sessaoAlerta p {
+    width: 90%;
+    font-size: 22px;
+    text-align: center;
+  }
+  .sessaoAlerta img {
+    width: 40%;
+  }
+  .sessaoCorrida {
+    height: 80vh;
+    flex-direction: column;
+  }
+  .sessaoCorrida p {
+    width: 90%;
+    font-size: 22px;
+    text-align: center;
+  }
+  .sessaoDicas {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .sessaoDicas img {
+    width: 20vh;
+    margin: 0 auto;
+  }
+  footer .redesSociais {
+    width: 200px;
   }
 }/*# sourceMappingURL=style.css.map */
